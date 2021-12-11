@@ -72,7 +72,7 @@ int tmp;
 * MPI
 * Векторизация
 
-## Скомпилируйте и запустите программу, используя следующий код:
+## Компиляция и запуск:
 ```
 mpicc main.c -o object_file
 mpirun -np [number of processes] ./object_file
