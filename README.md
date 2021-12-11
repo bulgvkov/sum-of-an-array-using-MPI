@@ -51,6 +51,21 @@ index = i * elements_per_process;
     MPI_COMM_WORLD);
 ```
 
+* Cобираем частичные суммы из других процессов
+```
+int tmp;
+  for (i = 1; i < np; i++) {
+    MPI_Recv(&tmp, 1, MPI_INT,
+      MPI_ANY_SOURCE, 0,
+      MPI_COMM_WORLD,
+      &status);
+   
+    int sender = status.MPI_SOURCE;
+  
+    sum += tmp;
+}
+```
+
 ## Скомпилируйте и запустите программу, используя следующий код:
 ```
 mpicc main.c -o object_file
