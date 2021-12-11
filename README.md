@@ -11,3 +11,7 @@
 mpicc main.c -o object_file
 mpirun -np [number of processes] ./object_file
 ```
+##Вывод
+```
+Sum of array is : 45
+```
