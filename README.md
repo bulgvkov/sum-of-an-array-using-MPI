@@ -7,7 +7,7 @@
 * далее все полученные суммы также разбиваются на пары, и снова выполняется суммирование значений пар и т.д
 
 ## Скомпилируйте и запустите программу, используя следующий код:
-```С
-mpicc program_name.c -o object_file
+```
+mpicc main.c -o object_file
 mpirun -np [number of processes] ./object_file
 ```
